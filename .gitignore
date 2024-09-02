@@ -1,3 +1,7 @@
+# db
+*.db
+*.sql
+
 # dependencies
 node_modules/
 
