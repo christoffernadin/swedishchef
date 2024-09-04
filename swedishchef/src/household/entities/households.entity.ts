@@ -10,7 +10,7 @@ export class Household {
   name: string;
 
   @OneToMany(() => User, (user) => user.household)
-  users: User[];
+  users: Promise<User[]>;
 
   @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
   created_at: Date;

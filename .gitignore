@@ -52,3 +52,11 @@ build/config\.gypi
 
 .npmrc
 pnpm-lock.yaml
+
+# Local
+.env
+dist
+.webpack
+.serverless/**/*.zip
+
+*/dist

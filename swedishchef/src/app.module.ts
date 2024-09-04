@@ -3,13 +3,18 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UsersModule } from './users/users.module';
-import { HouseholdModule } from './household/household.module';
+import { HouseholdModule } from './household/households.module';
 
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      type: 'sqlite',
-      database: 'swedishchef.db',
+      type: 'postgres',
+      host: 'localhost',
+      port: 5432,
+      username: 'swedishchef',
+      password: 'swechef123',
+      database: 'swedishchef',
+      entities: [__dirname + '/**/*.entity.ts'],
       synchronize: true,
       autoLoadEntities: true,
     }),

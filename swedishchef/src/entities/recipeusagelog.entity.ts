@@ -1,6 +1,6 @@
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 import { Recipe } from './recipe.entity';
-import { Household } from '../household/entities/household.entity';
+import { Household } from '../household/entities/households.entity';
 
 @Entity()
 export class RecipeUsageLog {
